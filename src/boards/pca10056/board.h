@@ -25,20 +25,21 @@
 #ifndef PCA10056_H
 #define PCA10056_H
 
+#define _PINNUM(port, pin)  ((port)*32 + (pin))
+
 /*------------------------------------------------------------------*/
 /* LED
  *------------------------------------------------------------------*/
-#define LEDS_NUMBER         2
-#define LED_PRIMARY_PIN     13
-#define LED_SECONDARY_PIN   14
-#define LED_STATE_ON        0
+#define LEDS_NUMBER         1
+#define LED_PRIMARY_PIN     _PINNUM(1, 15) // Blue
+#define LED_STATE_ON        1
 
 /*------------------------------------------------------------------*/
 /* BUTTON
  *------------------------------------------------------------------*/
 #define BUTTONS_NUMBER      2
-#define BUTTON_1            11
-#define BUTTON_2            12
+#define BUTTON_1            _PINNUM(0, 9)
+#define BUTTON_2            _PINNUM(0, 10)
 #define BUTTON_PULL         NRF_GPIO_PIN_PULLUP
 
 //--------------------------------------------------------------------+
